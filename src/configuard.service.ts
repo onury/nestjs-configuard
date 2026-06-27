@@ -1,6 +1,7 @@
 import {
   Inject,
   Injectable,
+  Logger,
   type OnApplicationBootstrap,
   type OnModuleDestroy
 } from '@nestjs/common';
@@ -27,6 +28,7 @@ export class ConfiguardService implements OnApplicationBootstrap, OnModuleDestro
   /** Admin-UI helper: serialize edits back into DB-ready rows. */
   static readonly serializeFlat = Configuard.serializeFlat;
 
+  private readonly logger = new Logger(ConfiguardService.name);
   private current: Configuard;
   private timer?: ReturnType<typeof setInterval>;
 
@@ -98,7 +100,11 @@ export class ConfiguardService implements OnApplicationBootstrap, OnModuleDestro
     const ms = this.options.refreshIntervalMs ?? 0;
     if (ms > 0 && this.options.refreshEnabled !== false) {
       this.timer = setInterval(() => {
-        void this.reload();
+        this.reload().catch((error: unknown) => {
+          // Keep serving the last-good config on a transient refresh failure
+          // instead of crashing on an unhandled rejection.
+          this.logger.error('Background config refresh failed; keeping the last config.', error);
+        });
       }, ms);
       // Don't keep the event loop alive just for config refresh.
       this.timer.unref();

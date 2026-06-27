@@ -1,3 +1,4 @@
+import { Logger } from '@nestjs/common';
 import { AccessorType, Configuard, type IConfigItem, ListType, ValueType } from 'configuard';
 import { ConfiguardService } from './configuard.service';
 import type { ConfiguardBuilder, ResolvedRefreshOptions } from './types';
@@ -111,6 +112,23 @@ describe('ConfiguardService — TTL auto-refresh', () => {
 
     svc.onModuleDestroy();
     expect(clearSpy).toHaveBeenCalledWith(fakeTimer);
+  });
+
+  it('logs and swallows a failed background refresh', async () => {
+    const { setSpy } = spyTimers();
+    const logSpy = vi.spyOn(Logger.prototype, 'error').mockImplementation(() => {});
+    const builder = vi.fn<ConfiguardBuilder>().mockRejectedValue(new Error('db down'));
+    const svc = makeService(build(), builder, { refreshIntervalMs: 1000 });
+
+    svc.onApplicationBootstrap();
+    (setSpy.mock.calls[0][0] as () => void)();
+    await new Promise((resolve) => setImmediate(resolve)); // flush reload + catch
+
+    expect(builder).toHaveBeenCalledTimes(1);
+    expect(logSpy).toHaveBeenCalledWith(
+      expect.stringContaining('Background config refresh failed'),
+      expect.any(Error)
+    );
   });
 
   it('treats an absent refreshEnabled as enabled', () => {

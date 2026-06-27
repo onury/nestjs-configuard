@@ -13,5 +13,5 @@
     "!src/types.ts",
     "!src/**/*.{test,spec}.ts"
   ],
-  "thresholds": { "high": 95, "low": 90, "break": 90 }
+  "thresholds": { "high": 100, "low": 90, "break": 100 }
 }

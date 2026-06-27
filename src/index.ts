@@ -15,7 +15,7 @@ export {
 } from 'configuard';
 export { ConfiguardModule } from './configuard.module';
 export { ConfiguardService } from './configuard.service';
-export { CONFIGUARD, CONFIGUARD_OPTIONS, InjectConfiguard } from './tokens';
+export { CONFIGUARD, InjectConfiguard } from './tokens';
 export type {
   ConfiguardFactoryResult,
   ConfiguardModuleAsyncOptions,

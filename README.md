@@ -107,6 +107,10 @@ export class PortService {
 `instance` — plus `reload()`. Static `ConfiguardService.parseFlat` /
 `serializeFlat` mirror configuard's admin-UI helpers.
 
+> `reload()` re-runs the registration factory, so it only fetches fresh values
+> under `forRootAsync`. Under `forRoot` (static `rows`) it rebuilds from the same
+> in-memory list — effectively a no-op.
+
 ### Raw instance — `@InjectConfiguard()`
 
 For advanced use where you want the boot instance directly (no live reload):
