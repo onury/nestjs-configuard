@@ -171,11 +171,11 @@ keep it off (break-glass) without removing the interval config.
   attribute-based access control (RBAC/ABAC) for Node.js.
 - [**nestjs-accesscontrol**](https://github.com/onury/nestjs-accesscontrol) —
   role & attribute-based access control for NestJS, built natively on
-  accesscontrol v3 — fluent CRUD decorators, fail-closed guard, attribute
+  [accesscontrol](https://github.com/onury/accesscontrol) v3 — fluent CRUD decorators, fail-closed guard, attribute
   filtering.
 - [**notation**](https://github.com/onury/notation) — utility for modifying /
   processing the contents of objects or arrays via object-notation strings or
-  globs. *(configuard is built on it)*
+  globs. *([configuard](https://github.com/onury/configuard) is built on it)*
 
 ## License
 
