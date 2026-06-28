@@ -159,7 +159,7 @@ keep it off (break-glass) without removing the interval config.
 
 - **100% test coverage** (Vitest + istanbul) and a **100% mutation score**
   (Stryker) — both enforced in CI, which also runs on Node 20, 22, and 24.
-- **ESM-only**, **TypeScript strict**, Node **≥ 20**.
+- **[ESM](https://gist.github.com/onury/d3f3d765d7db2e8b2d050d14315f2ac7)-only**, **TypeScript strict**, Node **≥ 20**.
 - One tool for lint + format ([Biome](https://biomejs.dev)).
 
 ## Related Projects
