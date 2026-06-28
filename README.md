@@ -1,4 +1,4 @@
-<h1 align="center">nestjs-configuard</h1>
+# nestjs-configuard
 
 <p align="center">
   <a href="https://github.com/onury/nestjs-configuard/actions/workflows/ci.yml"><img src="https://github.com/onury/nestjs-configuard/actions/workflows/ci.yml/badge.svg" alt="build" /></a>
