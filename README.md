@@ -5,12 +5,13 @@
   <a href="#quality"><img src="https://img.shields.io/badge/coverage-100%25-2BB150?logo=vitest&logoColor=%23FDC72B&style=flat" alt="coverage" /></a>
   <a href="#quality"><img src="https://img.shields.io/badge/mutation-100%25-2BB150?style=flat" alt="mutation score" /></a>
   <a href="https://www.npmjs.com/package/nestjs-configuard"><img src="https://img.shields.io/npm/v/nestjs-configuard.svg?style=flat&label=&color=%23C6234B&logo=npm" alt="version" /></a>
+  <a href="https://img.shields.io/badge/deps-zero-2BB150"><img src="https://img.shields.io/badge/deps-zero-2BB150?style=flat" alt="zero dependencies" /></a>
   <a href="https://gist.github.com/onury/d3f3d765d7db2e8b2d050d14315f2ac7"><img src="https://img.shields.io/badge/ESM-F7DF1E?style=flat" alt="ESM" /></a>
-  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TS-3260C7?style=flat" alt="TS" /></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TS-3260C7?style=flat" alt="TypeScript" /></a>
   <a href="https://github.com/onury/nestjs-configuard/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat" alt="license" /></a>
 </p>
 
-> This module is **ESM** 🔆.
+> 🔆 **[ESM](https://gist.github.com/onury/d3f3d765d7db2e8b2d050d14315f2ac7)-only.** Requires Node ≥ 20 and NestJS 10 / 11.
 
 NestJS integration for [**configuard**](https://onury.io/configuard) — wires a
 DB-backed, **typed**, **ABAC-filtered** runtime configuration object into Nest's
