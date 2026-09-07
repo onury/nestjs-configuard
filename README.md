@@ -11,7 +11,7 @@
   <a href="https://github.com/onury/nestjs-configuard/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat" alt="license" /></a>
 </p>
 
-> 🔆 **[ESM](https://gist.github.com/onury/d3f3d765d7db2e8b2d050d14315f2ac7)-only.** Requires Node ≥ 20 and NestJS 10 / 11.
+> 🔆 **[ESM](https://gist.github.com/onury/d3f3d765d7db2e8b2d050d14315f2ac7)-only.** Requires Node ≥ 20 and NestJS 10 / 11 / 12.
 
 NestJS integration for [**configuard**](https://onury.io/configuard) — wires a
 DB-backed, **typed**, **ABAC-filtered** runtime configuration object into Nest's

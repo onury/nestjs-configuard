@@ -4,6 +4,12 @@ All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/) and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-09-08
+
+### Fixed
+
+- Peer dependency ranges now accept NestJS 12 (`@nestjs/common`, `@nestjs/core` `^10 || ^11 || ^12`). No code change; the test suite runs against NestJS 12.
+
 ## [1.0.0] - 2026-06-28
 
 ### Added
