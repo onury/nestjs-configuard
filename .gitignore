@@ -9,8 +9,6 @@ reports/
 .idea/
 .vscode/
 
-# ---- Working notes ----
-_notes/
 _backup/
 
 # The latest test reports (coverage, mutation)
